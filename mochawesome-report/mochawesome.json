@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-13T17:33:24.978Z",
+    "end": "2023-06-13T17:33:25.143Z",
+    "duration": 165,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "442c7168-c794-4be7-9f9d-e9b8301315aa",
+      "title": "",
+      "fullFile": "C:\\Users\\cposser\\Desktop\\testes\\test\\Get_simple_user.js",
+      "file": "\\test\\Get_simple_user.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f36bac8e-2087-48b8-800d-61659eea8e11",
+          "title": "@GET a single user",
+          "fullFile": "C:\\Users\\cposser\\Desktop\\testes\\test\\Get_simple_user.js",
+          "file": "\\test\\Get_simple_user.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: making request in \"@GET a single user\"",
+              "fullTitle": "@GET a single user \"before all\" hook: making request in \"@GET a single user\"",
+              "timedOut": false,
+              "duration": 152,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "res = await axios.get(`${environment.baseUrl}/users/7`);",
+              "err": {},
+              "uuid": "5e178e55-eba3-4fe4-ad00-82e4ef43f1fc",
+              "parentUUID": "f36bac8e-2087-48b8-800d-61659eea8e11",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate response",
+              "fullTitle": "@GET a single user Validate response",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(res.status).to.be.eq(200);\nexpect(res.data).to.not.be.eq(\"\");",
+              "err": {},
+              "uuid": "c1993b00-67fa-45cc-a46a-b0798207c445",
+              "parentUUID": "f36bac8e-2087-48b8-800d-61659eea8e11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate types",
+              "fullTitle": "@GET a single user Validate types",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "validation.validateValueType(res.data.data, respUser.data);\nvalidation.validateValueType(res.data.support, respUser.support);",
+              "err": {},
+              "uuid": "101cb1de-ff56-4086-82d0-08955a42b2f7",
+              "parentUUID": "f36bac8e-2087-48b8-800d-61659eea8e11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate keys",
+              "fullTitle": "@GET a single user Validate keys",
+              "timedOut": false,
+              "duration": 3,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "validation.validateKeys(res.data.data, respUser.data);\nvalidation.validateKeys(res.data.support, respUser.support);",
+              "err": {},
+              "uuid": "1a669d4c-c55d-4e21-a086-107e07deb482",
+              "parentUUID": "f36bac8e-2087-48b8-800d-61659eea8e11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c1993b00-67fa-45cc-a46a-b0798207c445",
+            "101cb1de-ff56-4086-82d0-08955a42b2f7",
+            "1a669d4c-c55d-4e21-a086-107e07deb482"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 1000000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 1000000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.1.1"
+    }
+  }
+}
